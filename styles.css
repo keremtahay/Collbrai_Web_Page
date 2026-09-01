@@ -1,0 +1,652 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+@keyframes yukarı{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-3px);
+    }
+}
+
+:root{
+    --page_padding: 8%;
+    --text_font:"Geist", sans-serif, Arial, sans-serif;
+    --border_color:#dfe3ea;
+}
+
+
+/* -----------------------------------------Header--------------------------------------*/
+.header{
+    display:flex;
+    align-items: center;
+    background-color: white;
+    justify-content: space-between;
+    border-bottom:1px solid var(--border_color);
+    padding-left:7vw;
+    padding-right: 7vw;
+    margin: auto;
+    position: sticky;
+    top:0;
+    z-index: 100;
+}
+
+.header_nav{
+    display: flex;
+    gap:15px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 60dvw;
+    height: 74px;
+    overflow-x: hidden;
+}
+.first_page_buttons{
+    display:flex;
+    align-items: center;
+    gap:5px;
+    border:none;
+    background-color: white;
+    color: #4f5767 ;
+}
+
+.first_page_buttons:hover{
+    color: #3b2aa3;
+}
+.header_nav_links{
+    color: #4f5767;
+    text-decoration: none;
+    font: 13px var(--text_font);
+}
+.header_nav_links:hover{
+    color: #3b2aa3;
+}
+
+.header_actions{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    width: 15dvw;
+    height: 74px;
+}
+.header_actions_hamburger{
+    border:0;
+    background-color: white;
+    display: none;
+    cursor: pointer;
+}
+.header_actions_button{
+    display:flex;
+    align-items: center;
+    gap:7px;
+    border:none;
+    border-bottom: 0.8px #3b2aa3 solid;
+    font-size: 12px;
+    background-color: white;
+    color: #171827;
+    font-weight: 700;
+    padding: 7px 2px;
+}
+.header_actions_link{
+    display: flex;
+     text-decoration: none;
+    font: 13px var(--text_font);
+    border-radius: 999px;
+    background-color:#3b2aa3 ;
+    color:white;
+    font-weight: 700;
+    padding: 10px 17px;
+    border:0.8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.header_actions_link:hover{
+    animation: yukarı 500ms forwards ease-in-out;
+    box-shadow:0 12px 34px #3b2aa326;
+}
+
+
+
+/*----------------------------------Home Page--------------------------------*/
+
+.home_page{
+    display:grid;
+    grid-template-columns:.84fr 1.35fr;
+    gap:45px;
+    min-height: 670px;
+    padding-left: var(--page_padding);
+    padding-right: var(--page_padding);
+    padding-top: 54px;
+    align-items: center;
+    
+}
+
+.home_page_infos1{
+    color: #3b2aa3;
+    letter-spacing: .16em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    display: block;
+    font: 12px var(--text_font);
+}
+
+.home_page_infos2{
+    max-width: 700px;
+    margin-bottom: 30px;
+    line-height: .93    ;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: clamp(55px, 6.1vw, 96px);;
+}
+.home_page_infos3{
+    max-width: 640px;
+    margin-bottom: 34px;
+    font-size: 19px;
+    font-family:var(--text_font);
+    color:#5f6878;
+    line-height: 1.72;
+}
+.home_page_buttons{
+    width: fit-content;
+}
+.home_page_button1{
+    display:flex;
+    align-items: center;
+    gap:10px;
+    border:none;
+    font:16px "Geist", sans-serif, Arial, sans-serif;
+    font-weight: 700;
+    border-radius: 999px;
+    padding: 15px 23px;
+    background-color: #3b2aa3;
+    color: white;
+    margin-bottom:15px;
+    text-decoration: none;
+}
+.home_page_button1:hover{
+    animation: yukarı 500ms forwards;
+    box-shadow:0 12px 34px #3b2aa326;
+}
+
+.home_page_button2{
+    display:flex;
+    gap:12px;
+    flex-wrap: wrap;
+    width: fit-content;
+    border:.8px solid var(--border_color);
+    font:16px var(--text_font);
+    font-weight: 700;
+    border-radius: 999px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 23px;
+    background-color: white;
+    color: black;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+.home_page_button2:hover{
+    animation: yukarı 500ms forwards;
+    box-shadow:0 12px 34px #3b2aa326;  
+}
+
+
+/*---------------------------------Main Page------------------------------*/
+.main_page_video video{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 10px;
+
+}
+.main_page_truststrip{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom:35px;
+}
+.main_page_truststrip_div{
+    display: flex;
+    align-items: center;
+    border-top:1px solid var(--border_color);
+    border-bottom:1px solid #dfe3ea;
+    border-right:1px solid #dfe3ea;
+    padding: 25px 18px;
+    gap: 12px;
+}
+.main_page_truststrip_div1{
+    display: flex;
+    align-items: center;
+    border-top:1px solid var(--border_color);
+    border-bottom:1px solid var(--border_color);
+    padding: 25px 18px;
+    gap:12px;
+}
+
+.main_page_truststrip1{
+    display: flex;
+    align-items: center;
+    color:#4f5868;
+    font-size: 13px;
+    font-family:var(--text_font) ; 
+    gap: 12px;
+}
+.main_page_truststrip2{
+    display: flex;
+    align-items: center;
+    color:#4f5868;
+    font-size: 13px;
+    font-family:var(--text_font) ; 
+    gap:12px;
+}
+.main_page_truststrip3{
+    display: flex;
+    align-items: center;
+    color:#4f5868;
+    font-size: 13px;
+    font-family:var(--text_font); 
+    gap:12px;
+}
+.main_page_truststrip4{
+    display: flex;
+    align-items: center;
+    color:#4f5868;
+    font-size: 13px;
+    font-family:var(--text_font) ; 
+    gap:12px;
+}
+
+.main_page_truststrip_div svg{
+    color: #3b2aa3;
+}
+.main_page_truststrip_div1 svg{
+    color:#3b2aa3;
+}
+
+/* ----------------------------------Referanslar -----------------------------*/
+.güvenenler_page{
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 100px;
+    padding-bottom: 90px;
+}
+.güvenenler_page_title h2{
+    margin-bottom: 22px;
+    text-align: center;
+    font-family:'Space Grotesk', sans-serif ;
+    font-size: 60px;
+    padding-bottom: 22px;
+    font-weight: 400;
+
+}
+
+.güvenenler_page_imgs{
+   display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    background-color: #f4f4f1; 
+    border-radius: 16px; 
+    border: 1px solid #e5e7eb;   
+    overflow: hidden;
+}
+.güvenenler_page_partner{
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    padding: 30px;           
+    border-right: 1px solid #d1d5db;
+}
+
+
+/*-------------------------------Calisma Prensibi --------------------------------*/
+.calisma_prensibi{
+    display: grid;
+    grid-template-columns:1fr 1.5fr ;
+    margin-left: var(--page_padding);
+    margin-right: var(--page_padding);
+    padding-top: 100px;
+    min-height: 70vh;
+    margin-bottom: 100px;
+
+}
+.calisma_prensibi_left{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    
+}
+.calisma_prensibi_left_h2{
+    font-family:'Space Grotesk', sans-serif  ;
+    margin-bottom:22px;
+    line-height: 1.02;
+    letter-spacing: -.035em;
+    font-size: 4em;
+    font-weight:400 ;
+}
+.calisma_prensibi_left_p{
+    font-family:var(--text_font);
+    color:#4f5868;
+    font-size: 18px;
+    line-height: 1.72em;
+    letter-spacing: -.020em;
+}
+.calisma_prensibi_right{
+    display: grid;
+    grid-template-columns: 1fr 10px 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap:10px    ;
+    padding-left: 50px;
+}
+.calisma_prensibi_right_camera{
+    border-radius: 16px;
+    border: 1px solid #dfe3ea;
+}
+.calisma_prensibi_right_camera1{
+    display: flex;
+    justify-content:space-between ;
+    padding:20px;
+    align-items: center;
+}
+.calisma_prensibi_right_camera1 svg{
+    color: #3b2aa3;
+    width: 40px;  
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--text_font);
+    padding: 10px;
+}
+.calisma_prensibi_right_camera1 span{
+    font-size: 10px;
+    font-family:var(--text_font) ;
+    color: #8b93a2;
+}
+.calisma_prensibi_right_camera2{
+    padding:20px;
+}
+.calisma_prensibi_right_camera2 h3{
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-family:var(--text_font)  ;
+    color:#171827;
+}
+.calisma_prensibi_right_camera2 p{
+    font-size: 12px;
+    font-family:var(--text_font)  ;
+    color: #5f6878; 
+    padding-right:20px;
+}
+.calisma_prensibi_right_svg{
+   color: #a5a5a5;
+   align-self: center;
+}
+
+/*-----------------------------------------Footer----------------------------------*/
+footer{
+    display :grid;
+    grid-template-columns: 1fr 3fr;
+    padding-left:8% ;
+    padding-right: 8%;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    padding-top:70px;
+    gap:60px;
+    border-top:1px solid #dfe3ea
+}
+.footer_links{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:30px;
+    align-items: start;
+}
+.footer_column_p{
+    margin-top:25px;
+    font-size: 16px;
+    font-family:var(--text_font) ;
+    color:#5f6878;
+}
+.footer_column2{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    text-align: start;
+    justify-content: center;
+}
+.footer_column_title{
+    font-family:var(--text_font)  ;
+    font-size: 11px;
+    color:#3b2aa3;
+    margin-bottom:10px;
+}
+.footer_column_links{
+    text-decoration: none;
+    font-family:var(--text_font)  ;
+    font-size: 13px;
+    color:#5f6878;
+}
+.footer_end{
+    border-top: 1px solid var(--border_color);
+    color: #757e8d;
+    justify-content: space-between;
+    padding-top: 22px;
+    margin-top: 60px;
+    margin-bottom:30px;
+    margin-left:8%;
+    margin-right:8%;
+    font-size: 11px;
+    display: flex;
+}
+.footer_end_span{
+   font-family:var(--text_font) ;
+   font-size:11px;
+   color: #757e8d;
+}
+
+
+/*--------------------------------------------@Media---------------------------------------*/
+
+
+
+@media(max-width:768px){
+    .header{
+    display:flex;
+    padding-left:18px;
+    padding-right: 18px;
+}
+.header_nav{
+    display: none;
+}
+
+.header_actions{
+    display: flex;
+}
+.header_actions_hamburger{
+    border:0;
+    background-color: white;
+    display: flex;
+    cursor: pointer;
+}
+.header_actions_link{
+    display: none;
+}
+/*---------Home Page------------------------*/
+
+.home_page{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+
+    padding-left:20px ;
+    padding-right:20px ;
+
+    
+}
+
+.home_page_infos1{
+    font: 12px var(--text_font);
+}
+
+.home_page_infos2{
+    font-size: 46px;;
+}
+.home_page_infos3{
+    font-size: 16px;
+    line-height: 1.72;
+}
+.home_page_button2:hover{
+    animation: yukarı 500ms forwards;
+    box-shadow:0 12px 34px #3b2aa326;  
+}
+
+/*------------------------------Main Page------------------------*/
+
+.main_page_truststrip{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top:36px;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom:20px;
+    padding:0;
+}
+.main_page_truststrip_div{
+    border-right:none;
+}
+
+/*----------------------------Referanslar--------------------------*/
+.güvenenler_page{
+    padding-left:20px;
+    padding-right:20px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+.güvenenler_page_title h2{
+    margin-bottom: 22px;
+    font-size: 32px;
+    padding-bottom: 22px;
+}
+
+.güvenenler_page_imgs{
+    grid-template-columns: 1fr; 
+}
+.güvenenler_page_partner{          
+    border-bottom: 1px solid #d1d5db;
+}
+
+/*---------------------Calisma Prensibi------------------------------*/
+
+.calisma_prensibi{
+    display: grid;
+    grid-template-columns:1fr ;
+    margin-left: 20px;
+    margin-right:20px;
+    padding-top: 64px;
+    min-height: 70vh;
+    margin-bottom: 20px;
+
+}
+.calisma_prensibi_left{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    
+}
+.calisma_prensibi_left_h2{
+    font-size: 37px;
+}
+.calisma_prensibi_left_p{
+    padding-bottom: 35px ;
+}
+.calisma_prensibi_right{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap:38px ;
+    padding-left: 0;
+}
+.calisma_prensibi_right_svg{
+    display:none;
+}
+/*-------------------------------Footer-------------------------*/
+
+footer{
+    grid-template-columns: 1fr;
+    padding-left:24px;
+    padding-right: 24px;
+}
+.footer_links{
+    grid-template-columns: 1fr ;
+}
+.footer_end{
+    margin-bottom:30px;
+    margin-left:24px;
+    margin-right:24px;
+    flex-direction: column;
+    gap:8px;
+}
+}
+
+@media(max-width:1175px){
+.header{
+    padding: 0 20px;
+}    
+    .header_nav{
+    display: none;
+}
+.header_actions_hamburger{
+    border:0;
+    background-color: white;
+    display: flex;
+    cursor: pointer;
+}
+.home_page{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+
+    padding-left:20px ;
+    padding-right:20px ;
+
+    
+}
+
+.home_page_infos1{
+    font: 12px var(--text_font);
+}
+
+.home_page_infos2{
+    font-size: 46px;;
+}
+.home_page_infos3{
+    font-size: 16px;
+    line-height: 1.72;
+}
+.home_page_button2:hover{
+    animation: yukarı 500ms forwards;
+    box-shadow:0 12px 34px #3b2aa326;  
+}
+
+}
+@media(max-width:931px){
+    .güvenenler_page{
+    padding-left:20px;
+    padding-right:20px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+.güvenenler_page_title h2{
+    margin-bottom: 22px;
+    font-size: 32px;
+    padding-bottom: 22px;
+}
+
+.güvenenler_page_imgs{
+    grid-template-columns: 1fr; 
+}
+.güvenenler_page_partner{          
+    border-bottom: 1px solid #d1d5db;
+}
+
+}
